@@ -18,16 +18,16 @@ public class Module {
 
     }
 
-    public String name(){
+    public String getName(){
         return name;
     }
-    public int id(){
+    public int getID(){
         return id;
     }
-    public ArrayList students(){
+    public ArrayList getStudents(){
         return students;
     }
-    public String lecturer(){
+    public String getLecturer(){
         return lecturer;
     }
     public void addStudent(Student student){
