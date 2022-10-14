@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="LecturerTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-10-14T19:05:56" hostname="DESKTOP-V2UD1NB" time="0.381">
+  <properties/>
+  <testcase name="testGetUsername()" classname="LecturerTest" time="0.381"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
