@@ -13,35 +13,31 @@ public class CourseProgramme {
     //must be added as a project dependency (see
 
     private String courseName;
-    private ArrayList modules;
-    private ArrayList students;
+    private ArrayList moduleList;
+    private ArrayList studentList;
     private DateTime startDate;
     private DateTime endDate;
 
-    public CourseProgramme(String courseName, ArrayList<Module> modules, DateTime startDate, DateTime endDate){
+    public CourseProgramme(String courseName, DateTime startDate, DateTime endDate){
         this.courseName = courseName;
-        this.modules = modules;
-        this.students = new ArrayList<Student>();
         this.startDate = startDate;
         this.endDate = endDate;
+        studentList = new ArrayList<Student>();
+        moduleList = new ArrayList<Module>();
+
     }
 
-    public String getName(){
-        return courseName;
-    }
-    public ArrayList getModules(){
-        return modules;
-    }
-    public ArrayList getStudents(){
-        return students;
-    }
-    public DateTime getStartDate(){
-        return startDate;
-    }
-    public DateTime getEndDate(){
-        return endDate;
-    }
+   public void addStudent( Student student){
 
+        studentList.add(student);
+   }
 
+   public void addModule(Module module){
+        moduleList.add(module);
+   }
+
+   public String toString(){
+        return "Course: " + courseName + " \n" + "Start: " + startDate + "\n" + "End: " + endDate + "\n" + "Modules: " + moduleList.toString() + "\n" + "Students: " + "\n" + studentList.toString();
+   }
 
 }

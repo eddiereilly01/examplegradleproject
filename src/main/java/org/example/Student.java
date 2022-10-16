@@ -1,6 +1,9 @@
 package org.example;
 
 import org.joda.time.*;
+
+import java.util.ArrayList;
+
 public class Student {
 
     //(Name, Age, DOB, ID,
@@ -8,43 +11,41 @@ public class Student {
     //A specific method (getUsername()) will generate the student’s username by
     //concatenating their name and age
 
-    private String name = "";
-    private int age = 0;
-    private int id = 0;
+    private String name;
     private String username;
-    private String[] courses;
-    private Module[] modules;
+    private int id;
+    private int age;
     private DateTime DOB;
+
+    private CourseProgramme course;
+    private ArrayList<Module> modules;
 
     public Student(int id, String name, int age, DateTime DOB){
         this.id = id;
         this.name = name;
         this.age = age;
         this.DOB = DOB;
-
+        this.modules = new ArrayList<Module>();
+        username = name + id;
     }
 
-    public int getAge(){
-        return age;
+    public Student(){
+        this.id = 1;
+        this.name = "John Smith";
+        this.age = 18;
+        this.DOB = new DateTime(2002, 8, 8, 0, 0);
+        this.modules = new ArrayList<Module>();
+        this.username = name + id;
     }
-    public int getId(){
-        return id;
-    }
-    public String getName(){
-        return name;
-    }
+
+
     public String getUsername(){
-        username = name + "." + id;
         return username;
     }
-    public String[] getCourse(){
-        return courses;
-    }
-    public Module[] getModules(){
-        return modules;
-    }
-    public DateTime getDOB(){
-        return DOB;
+
+    public String toString(){
+        return "\nId: " + id + " Username: " + username + " Name: " + name + " Age: " + age;
+
     }
 
 }
