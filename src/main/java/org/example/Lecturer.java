@@ -16,10 +16,12 @@ public class Lecturer {
         this.name = name;
         this.age = age;
         this.DOB = DOB;
-        username = name + "." + id;
+        username = null ;
         moduleList = new ArrayList<Module>();
     }
     public String getUsername(){
+
+        username=name + id;
         return username;
     }
 

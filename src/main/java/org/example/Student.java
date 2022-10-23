@@ -35,11 +35,13 @@ public class Student {
         this.age = 18;
         this.DOB = new DateTime(2002, 8, 8, 0, 0);
         this.modules = new ArrayList<Module>();
-        this.username = name + id;
+        this.username = null;
     }
 
 
     public String getUsername(){
+
+        username = name + id;
         return username;
     }
 
